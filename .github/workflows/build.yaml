@@ -35,6 +35,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: 
+          tags:| 
             ghcr.io/vitaliget/docker_build:${{ github.run_number }}
             ${{ secrets.DOCKERHUB_USERNAME }}/docker_build:${{ github.run_number }}
