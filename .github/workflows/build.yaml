@@ -38,25 +38,4 @@ jobs:
           tags: |
             ghcr.io/vitaliget/docker_build:${{ github.run_number }}
             ${{ secrets.DOCKERHUB_USERNAME }}/docker_build:${{ github.run_number }}
-      
-      - name: Slack Notification
-      uses: rtCamp/action-slack-notify@v2
-      if: success()
-      env:
-        SLACK_CHANNEL: gitreport
-        SLACK_COLOR: ${{ job.status }}
-        SLACK_ICON: https://github.com/rtCamp.png?size=48
-        SLACK_MESSAGE: 'Success Push'
-        SLACK_TITLE: Push image
-        SLACK_USERNAME: Vitali_Getmanovich 
-
-      - name: Slack Notification
-      uses: rtCamp/action-slack-notify@v2
-      if: failure()
-      env:
-        SLACK_CHANNEL: gitreport
-        SLACK_COLOR: ${{ job.status }}
-        SLACK_ICON: https://github.com/rtCamp.png?size=48
-        SLACK_MESSAGE: 'Failure Push'
-        SLACK_TITLE: Push image
-        SLACK_USERNAME: Vitali_Getmanovich
+ 
