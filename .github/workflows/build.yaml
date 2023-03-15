@@ -49,7 +49,6 @@ jobs:
         SLACK_MESSAGE: 'Success Push'
         SLACK_TITLE: Push image
         SLACK_USERNAME: Vitali_Getmanovich 
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 
       - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
@@ -61,4 +60,3 @@ jobs:
         SLACK_MESSAGE: 'Failure Push'
         SLACK_TITLE: Push image
         SLACK_USERNAME: Vitali_Getmanovich
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
